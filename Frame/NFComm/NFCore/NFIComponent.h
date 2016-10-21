@@ -35,12 +35,12 @@ public:
     NF_SHARE_PTR<T> CreateNewInstance()
     {
         NF_SHARE_PTR<NFIComponent> pComponent = CreateNewInstance();
-        if (nullptr != pComponent)
+        if(nullptr != pComponent)
         {
-            if (TIsDerived<T, NFIComponent>::Result)
+            if(TIsDerived<T, NFIComponent>::Result)
             {
                 NF_SHARE_PTR<T> pT = std::dynamic_pointer_cast<T>(pComponent);
-                if (nullptr != pT)
+                if(nullptr != pT)
                 {
                     return pT;
                 }
@@ -73,7 +73,7 @@ public:
 
     virtual NFGUID Self()
     {
-        return NULL_OBJECT;
+        return NULL_GUID;
     }
 
     virtual const std::string& GetComponentName() const

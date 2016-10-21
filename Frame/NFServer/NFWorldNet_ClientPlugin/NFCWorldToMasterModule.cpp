@@ -172,7 +172,7 @@ void NFCWorldToMasterModule::OnKickClientProcess(const int nSockIndex, const int
     //T»À,œ¬œﬂ
     //     NFCDataList var;
     //     var << xMsg.world_id() << xMsg.account();
-    //     m_pEventProcessModule->DoEvent(NFGUID(), NFED_ON_KICK_FROM_SERVER, var);
+    //     m_pEventProcessModule->DoEvent(NULL_GUID, NFED_ON_KICK_FROM_SERVER, var);
 }
 
 void NFCWorldToMasterModule::InvalidMessage(const int nSockIndex, const int nMsgID, const char * msg, const uint32_t nLen)
@@ -218,5 +218,5 @@ bool NFCWorldToMasterModule::BeforeShut()
 
 void NFCWorldToMasterModule::LogServerInfo(const std::string& strServerInfo)
 {
-    m_pLogModule->LogInfo(NFGUID(), strServerInfo, "");
+    m_pLogModule->LogInfo(NULL_GUID, strServerInfo, "");
 }

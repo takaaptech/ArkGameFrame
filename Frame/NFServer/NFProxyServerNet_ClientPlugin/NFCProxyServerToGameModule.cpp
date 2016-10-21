@@ -169,7 +169,7 @@ void NFCProxyServerToGameModule::OnAckEnterGame(const int nSockIndex, const int 
 
 void NFCProxyServerToGameModule::LogServerInfo(const std::string& strServerInfo)
 {
-    m_pLogModule->LogInfo(NFGUID(), strServerInfo, "");
+    m_pLogModule->LogInfo(NULL_GUID, strServerInfo, "");
 }
 
 void NFCProxyServerToGameModule::Transpond(const int nSockIndex, const int nMsgID, const char * msg, const uint32_t nLen)

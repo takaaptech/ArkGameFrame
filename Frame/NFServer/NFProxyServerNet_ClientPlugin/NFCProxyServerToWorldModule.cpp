@@ -235,7 +235,7 @@ bool NFCProxyServerToWorldModule::VerifyConnectData(const std::string& strAccoun
 
 void NFCProxyServerToWorldModule::LogServerInfo(const std::string& strServerInfo)
 {
-    m_pLogModule->LogInfo(NFGUID(), strServerInfo, "");
+    m_pLogModule->LogInfo(NULL_GUID, strServerInfo, "");
 }
 
 void NFCProxyServerToWorldModule::OnOtherMessage(const int nSockIndex, const int nMsgID, const char * msg, const uint32_t nLen)
